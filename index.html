@@ -111,15 +111,17 @@
   #phoxyn-fab{position:fixed;right:22px;bottom:22px;z-index:90;display:flex;align-items:center;gap:12px;cursor:pointer;border:none;background:none;padding:0}
   #phoxyn-fab .bubble{background:rgba(255,255,255,.92);backdrop-filter:blur(8px);border:1px solid var(--line);box-shadow:var(--shadow);border-radius:14px;padding:9px 13px;font-weight:700;font-size:.86rem;color:var(--ink);max-width:0;overflow:hidden;white-space:nowrap;opacity:0;transition:max-width .4s ease,opacity .3s ease}
   #phoxyn-fab.peek .bubble{max-width:240px;opacity:1}
-  #phoxyn-fab .ring{position:relative;width:104px;height:104px;display:grid;place-items:center;background:radial-gradient(circle at 50% 62%, rgba(255,255,255,.9), rgba(255,255,255,0) 68%);transition:transform .15s ease}
-  #phoxyn-fab .av{width:104px;height:104px;display:grid;place-items:center;font-size:44px;overflow:visible}
-  #phoxyn-fab .av img{width:100%;height:100%;object-fit:contain;display:block;filter:drop-shadow(0 10px 16px rgba(60,40,90,.30))}
-  #phoxyn-fab:hover .ring{transform:translateY(-3px)}
+  #phoxyn-fab .ring{position:relative;width:88px;height:88px;border-radius:50%;display:grid;place-items:center;background:radial-gradient(circle at 50% 38%, #1c1c2e 0%, #070710 78%);animation:phoxynPulse 2.6s ease-in-out infinite;transition:transform .15s ease}
+  @keyframes phoxynPulse{0%,100%{box-shadow:0 0 16px 2px rgba(232,168,35,.45), 0 8px 22px rgba(0,0,0,.45)}50%{box-shadow:0 0 36px 10px rgba(242,118,46,.7), 0 8px 22px rgba(0,0,0,.45)}}
+  #phoxyn-fab .av{width:74px;height:74px;border-radius:50%;display:grid;place-items:center;font-size:38px;overflow:hidden}
+  #phoxyn-fab .av img{width:100%;height:100%;object-fit:contain;display:block}
+  #phoxyn-fab:hover .ring{transform:scale(1.06)}
+  @media(prefers-reduced-motion:reduce){#phoxyn-fab .ring{animation:none}}
 
   #phoxyn-panel{position:fixed;right:22px;bottom:22px;z-index:95;width:380px;max-width:calc(100vw - 28px);height:560px;max-height:calc(100vh - 40px);background:rgba(255,255,255,.96);backdrop-filter:blur(18px);border:1px solid var(--line);border-radius:22px;box-shadow:0 30px 70px rgba(40,20,70,.32);display:none;flex-direction:column;overflow:hidden;transform:translateY(16px) scale(.98);opacity:0;transition:transform .25s ease,opacity .25s ease}
   #phoxyn-panel.open{display:flex;transform:none;opacity:1}
   .pp-head{display:flex;align-items:center;gap:12px;padding:16px 18px;color:#fff;background:linear-gradient(120deg,var(--orange),var(--violet))}
-  .pp-head .pav{width:46px;height:46px;border-radius:50%;background:rgba(255,255,255,.92);display:grid;place-items:center;font-size:22px;overflow:hidden;flex:0 0 auto}
+  .pp-head .pav{width:46px;height:46px;border-radius:50%;background:radial-gradient(circle at 50% 38%, #1c1c2e, #070710 78%);box-shadow:0 0 12px rgba(232,168,35,.5);display:grid;place-items:center;font-size:22px;overflow:hidden;flex:0 0 auto}
   .pp-head .pav img{width:100%;height:100%;object-fit:contain}
   .pp-head .who b{display:block;font-size:1rem;line-height:1.2}
   .pp-head .who span{font-size:.78rem;opacity:.9}
@@ -375,6 +377,4 @@ var KB = [
   {k:["standards","cee","jumpstart","jump$tart","cfpb","casel","aligned","accredited"],
    a:"PhoxFin is standards-aligned to the <b>CEE National Standards</b>, the <b>Jump$tart Coalition K-12</b> standards, and the <b>CFPB</b> youth financial-education developmental model, with supplementary <b>CASEL</b> social-emotional support. It's supplementary and not yet formally accredited; outreach to recognized bodies is ongoing."},
   {k:["phoxfin church","phoxfin bank","credit union","cra","phoxfin sponsor","phoxfin school","stewardship"],
-   a:"PhoxFin is built to be sponsor-ready: <b>schools</b> (standards-aligned, measurable), <b>churches &amp; community</b> (stewardship-friendly, family-first, no controversial content), and <b>banks &amp; credit unions</b> (co-branded certificates, verifiable records, <b>CRA</b>-documentation-ready cohort reporting). <a href='https://phoxfin.com/partners' target='_blank'>PhoxFin partners →</a>"},
-  {k:["phoxfin price","phoxfin free","phoxfin cost","phoxfin trial"],
-   a:"PhoxFin's <b>first 5 lessons are free &mdash; no card, cancel anytime</b>, with a 14-day trial. See <a href='https://phoxfin.com/pricing' tar
+   a:"PhoxFin is built to be sponsor-ready: <b>schools</b> (standards-aligned, measurable), <b>churches &amp; community</b> (stewardship-friendly, family-first, no controversial content), and <b>banks &amp; credit unions</b> (co-branded certificates, verifiable records, <b>CRA</b>-doc
