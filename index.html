@@ -60,8 +60,9 @@
   .sec-head h2{font-size:clamp(1.8rem,3.6vw,2.6rem);margin:0 0 12px;letter-spacing:-.4px;font-weight:800}
   .sec-head p{color:var(--ink-soft);font-size:1.08rem;margin:0}
   .kicker{font-size:.78rem;font-weight:800;letter-spacing:.18em;text-transform:uppercase;background:linear-gradient(90deg,var(--orange),var(--violet));-webkit-background-clip:text;background-clip:text;color:transparent;margin-bottom:10px}
-  .cards{display:grid;grid-template-columns:repeat(3,1fr);gap:26px}
-  @media(max-width:920px){.cards{grid-template-columns:1fr}}
+  .cards{display:grid;grid-template-columns:repeat(4,1fr);gap:18px}
+  @media(max-width:1000px){.cards{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:560px){.cards{grid-template-columns:1fr}}
   .card{position:relative;background:var(--card);backdrop-filter:blur(16px);border:1px solid rgba(255,255,255,.6);border-radius:22px;padding:32px 28px;box-shadow:var(--shadow);display:flex;flex-direction:column;overflow:hidden;transition:transform .2s ease, box-shadow .25s ease}
   .card::before{content:"";position:absolute;inset:0 0 auto 0;height:6px;background:linear-gradient(90deg,var(--accent),var(--accent2))}
   .card::after{content:"";position:absolute;width:200px;height:200px;border-radius:50%;background:radial-gradient(circle,var(--accent),transparent 70%);opacity:.22;top:-70px;right:-60px;filter:blur(10px);transition:opacity .25s ease}
@@ -236,6 +237,24 @@
           </div>
         </article>
 
+        <article class="card" style="--accent:#f2762e;--accent2:#7b5cf0">
+          <span class="pill soon">Coming soon</span>
+          <h3>PhoxFin Next</h3>
+          <div class="pron">The grown-up chapter of PhoxFin</div>
+          <div class="who">For adults &middot; Every stage of adulthood</div>
+          <p class="desc">Real financial confidence for adult life &mdash; built around seven lifelong pillars, from your first paycheck to your legacy. Calm, practical guidance from Phoxyn, now for grown-up money decisions.</p>
+          <ul>
+            <li>Seven pillars: Earn, Spend, Save, Borrow, Protect, Grow &amp; Give</li>
+            <li>Retirement planning across every life stage &mdash; early career to legacy</li>
+            <li>Modern topics: crypto, AI &amp; fintech tools, the gig economy, FIRE</li>
+            <li>Momentum Moments &mdash; premium micro-coaching woven through every lesson</li>
+          </ul>
+          <div class="foot">
+            <span class="go" style="background:linear-gradient(95deg,#a9a2b8,#c7c2d4);cursor:default">In development &middot; coming soon</span>
+            <button class="ask-phoxyn" onclick="phoxynAsk('Tell me about PhoxFin Next')">Ask Phoxyn about PhoxFin Next</button>
+          </div>
+        </article>
+
         <article class="card" style="--accent:var(--lumavori);--accent2:#7b5cf0">
           <span class="pill soon">Coming soon</span>
           <h3>Lumavori</h3>
@@ -268,6 +287,7 @@
           <div class="soon-item"><span class="soon-tag">Coming soon</span><b>One Village account</b><span>A single sign-in across Korethi, PhoxFin &amp; Lumavori.</span></div>
           <div class="soon-item"><span class="soon-tag">Coming soon</span><b>Family &amp; sponsor plans</b><span>Bundled access for households, schools &amp; community partners.</span></div>
           <div class="soon-item"><span class="soon-tag">Coming soon</span><b>Shared credentials</b><span>Verifiable certificates that travel across the Village.</span></div>
+          <div class="soon-item"><span class="soon-tag">Coming soon</span><b>PhoxFin Next</b><span>Adult financial literacy built on seven lifelong pillars.</span></div>
         </div>
       </div>
     </div>
@@ -365,6 +385,18 @@ var KB = [
   {k:["coding","computer science","python","programming","computational thinking"],
    a:"Yes &mdash; Korethi teaches coding from <b>unplugged logic games in PreK</b> through <b>real Python and AP Computer Science</b> by high school. No prior experience needed; I adapt every lesson to how your child learns."},
 
+  /* ===== PHOXFIN NEXT (adult curriculum) ===== */
+  {k:["phoxfin next","phox fin next","adult phoxfin","phoxfin for adults","grown up phoxfin","phoxfin-next"],
+   a:"<b>PhoxFin Next</b> is the adult continuation of PhoxFin &mdash; real financial confidence for every stage of adulthood, from your first paycheck to your legacy. It's built around <b>seven lifelong pillars</b> and delivered with the same calm, judgment-free guidance, now for grown-up money decisions. PhoxFin Next is <i>coming soon</i> &mdash; I can walk you through the framework anytime."},
+  {k:["seven pillars","7 pillars","phoxfin next pillars","financial pillars","pillars"],
+   a:"PhoxFin Next is organized around <b>seven pillars</b> that cover a whole financial life: <b>Earn</b> (careers, income, taxes, the gig economy), <b>Spend</b> (budgeting, banking, major purchases, fintech), <b>Save</b> (emergency funds, goals, compounding, retirement foundations), <b>Borrow</b> (credit, scores, loans, debt payoff), <b>Protect</b> (insurance, fraud, identity, digital security), <b>Grow</b> (investing, diversification, retirement planning, crypto, wealth building), and <b>Give</b> (charitable giving, stewardship, legacy &amp; estate planning)."},
+  {k:["retirement","retirement planning","401k","ira","roth","retire","social security"],
+   a:"In PhoxFin Next, <b>retirement planning</b> is a flagship topic under the <b>Grow</b> pillar, taught across life stages &mdash; <i>accumulation</i> (401(k)/403(b)/457, Traditional &amp; Roth IRAs, employer match, target-date funds) and <i>distribution</i> (Social Security, withdrawal strategies, RMDs, Medicare, longevity planning). The savings habit behind it lives in the <b>Save</b> pillar, so one topic serves a 25-year-old and a 65-year-old at different depth."},
+  {k:["momentum moments","micro coaching","money minute","quick win","reflection pause"],
+   a:"<b>Momentum Moments</b> are short, intentional coaching beats woven between learning sections in PhoxFin Next &mdash; premium micro-coaching, not brain breaks. Styles include a <i>Money Minute</i> (a 30&ndash;60 second insight), a <i>Reflection Pause</i> (a confidence check), a <i>Quick Win</i> (one immediate action), and a <i>Reality Check</i> (a quick &lsquo;what would you do?&rsquo;). Each takes under two minutes and never asks you to share personal financial details."},
+  {k:["who is phoxfin next for","phoxfin next age","phoxfin next launch","phoxfin next when","phoxfin next coming","adult financial"],
+   a:"PhoxFin Next is for <b>adults at every stage</b> &mdash; early career to retirement and beyond &mdash; with topics taught at the right depth for each life stage. It's the grown-up companion to the family-focused PhoxFin, and it's <i>coming soon</i>. Want me to add you to the list?"},
+
   /* ===== PHOXFIN ===== */
   {k:["phoxfin","what is phoxfin","tell me about phoxfin","phox fin"],
    a:"<b>PhoxFin</b> &mdash; &ldquo;a guided path into adulthood&rdquo; &mdash; is the Village's <b>family financial-literacy &amp; life-readiness</b> platform. It's a calm developmental arc you walk <i>with</i> your child, PreK&ndash;12 all the way to age 25: real decisions, real conversations, calm guidance from me. First 5 lessons free, no card. <a href='https://phoxfin.com' target='_blank'>Visit PhoxFin →</a>"},
@@ -377,4 +409,98 @@ var KB = [
   {k:["standards","cee","jumpstart","jump$tart","cfpb","casel","aligned","accredited"],
    a:"PhoxFin is standards-aligned to the <b>CEE National Standards</b>, the <b>Jump$tart Coalition K-12</b> standards, and the <b>CFPB</b> youth financial-education developmental model, with supplementary <b>CASEL</b> social-emotional support. It's supplementary and not yet formally accredited; outreach to recognized bodies is ongoing."},
   {k:["phoxfin church","phoxfin bank","credit union","cra","phoxfin sponsor","phoxfin school","stewardship"],
-   a:"PhoxFin is built to be sponsor-ready: <b>schools</b> (standards-aligned, measurable), <b>churches &amp; community</b> (stewardship-friendly, family-first, no controversial content), and <b>banks &amp; credit unions</b> (co-branded certificates, verifiable records, <b>CRA</b>-doc
+   a:"PhoxFin is built to be sponsor-ready: <b>schools</b> (standards-aligned, measurable), <b>churches &amp; community</b> (stewardship-friendly, family-first, no controversial content), and <b>banks &amp; credit unions</b> (co-branded certificates, verifiable records, <b>CRA</b>-documentation-ready cohort reporting). Final terms are always put in writing."},
+
+  /* ===== LUMAVORI ===== */
+  {k:["lumavori","what is lumavori","tell me about lumavori","lu ma vor i","learn forward"],
+   a:"<b>Lumavori</b> &mdash; &ldquo;Learn Forward.&rdquo; &mdash; is the Village's <b>adult learning</b> platform. It meets you exactly where you are, with no judgment and no shortcuts: <b>Oren</b>, your AI learning guide, builds a path around your goals, your life, and your pace. Lumavori is <i>coming soon</i>."},
+  {k:["oren","lumavori guide","adult guide"],
+   a:"<b>Oren</b> is your AI learning guide inside Lumavori &mdash; the adult counterpart to me. Oren builds a personalized path around your goals and pace, with the same calm, no-shame approach the whole Village is built on."},
+  {k:["lumavori tracks","adult tracks","esl","ged","citizenship","literacy","numeracy","workforce"],
+   a:"Lumavori offers <b>7 tracks</b>: literacy &amp; numeracy, ESL, citizenship, and GED prep, plus workforce re-entry, AI literacy, and parent academic support. Everything comes with shareable certificates and flexible, life-friendly pacing &mdash; and it's partner-ready for workforce, community &amp; government programs."},
+  {k:["lumavori launch","lumavori when","lumavori coming","adults coming"],
+   a:"Lumavori is in development &mdash; <i>coming soon</i>. Tell me where you are in your learning journey and I'll make sure you hear the moment it opens."},
+
+  /* ===== THE VILLAGE / GENERAL ===== */
+  {k:["village","our learning village","what is the village","platforms","three platforms","four platforms"],
+   a:"<b>Our Learning Village</b> is a family of learning platforms from KnightByrd Tech &mdash; one for every stage of life: <b>Korethi</b> (children, PreK&ndash;12), <b>PhoxFin</b> &amp; <b>PhoxFin Next</b> (money &amp; life readiness for families and adults), and <b>Lumavori</b> (adult learning). One philosophy, every age."},
+  {k:["what's coming","whats coming","coming soon","roadmap","launching","what is coming"],
+   a:"Coming to the Village: the full <b>Korethi</b> app this year, a <b>One Village account</b> (single sign-in across platforms), <b>Family &amp; sponsor plans</b>, <b>Shared credentials</b> that travel across the Village, and <b>PhoxFin Next</b> &mdash; adult financial literacy built on seven lifelong pillars."},
+  {k:["pricing","cost","price","how much","free","plans"],
+   a:"Most platforms open with a free way to start &mdash; Korethi's <b>14-step placement is free</b>, and PhoxFin's <b>first 5 lessons are free</b> with no card. Full pricing, family bundles, and sponsor plans are shared as each platform opens. There's income-based pricing and community sponsorships so cost is never the reason a learner is turned away."},
+  {k:["hello","hi ","hey","help","what can you do","who are you"],
+   a:"Hi! I'm <b>Phoxyn</b>, your Village guide. Ask me about <b>Korethi</b>, <b>PhoxFin</b>, <b>PhoxFin Next</b>, or <b>Lumavori</b> &mdash; subjects, pricing, the seven pillars, or what's launching next."}
+];
+
+/* ---- Phoxyn chat engine ---- */
+var ppPanel = document.getElementById("phoxyn-panel");
+var ppFab   = document.getElementById("phoxyn-fab");
+var ppBody  = document.getElementById("pp-body");
+var ppChips = document.getElementById("pp-chips");
+var ppStarted = false;
+var PP_CHIPS = ["What is Korethi?","Tell me about PhoxFin","PhoxFin Next","What's coming?","Pricing"];
+
+function phoxynOpen(){
+  if(ppPanel) ppPanel.classList.add("open");
+  if(ppFab) ppFab.style.display="none";
+  if(!ppStarted){
+    ppStarted=true;
+    ppBot("Hi! I'm <b>Phoxyn</b>, your guide to Our Learning Village. Ask me about <b>Korethi</b>, <b>PhoxFin</b>, <b>PhoxFin Next</b>, or <b>Lumavori</b> &mdash; or tap a question below.");
+    ppRenderChips();
+  }
+  setTimeout(function(){ var t=document.getElementById("pp-text"); if(t) t.focus(); }, 60);
+}
+function phoxynClose(){
+  if(ppPanel) ppPanel.classList.remove("open");
+  if(ppFab) ppFab.style.display="flex";
+}
+function ppRenderChips(){
+  if(!ppChips) return;
+  ppChips.innerHTML="";
+  PP_CHIPS.forEach(function(c){
+    var b=document.createElement("button");
+    b.className="chip"; b.textContent=c;
+    b.onclick=function(){ phoxynAsk(c); };
+    ppChips.appendChild(b);
+  });
+}
+function ppBot(html){
+  var d=document.createElement("div"); d.className="msg bot"; d.innerHTML=html;
+  ppBody.appendChild(d); ppBody.scrollTop=ppBody.scrollHeight;
+}
+function ppUser(text){
+  var d=document.createElement("div"); d.className="msg user"; d.textContent=text;
+  ppBody.appendChild(d); ppBody.scrollTop=ppBody.scrollHeight;
+}
+function ppTyping(){
+  var d=document.createElement("div"); d.className="typing"; d.id="pp-typing";
+  d.innerHTML="<i></i><i></i><i></i>";
+  ppBody.appendChild(d); ppBody.scrollTop=ppBody.scrollHeight;
+}
+function ppHideTyping(){ var t=document.getElementById("pp-typing"); if(t) t.remove(); }
+function ppFind(q){
+  var s=(q||"").toLowerCase();
+  for(var i=0;i<KB.length;i++){
+    var keys=KB[i].k;
+    for(var j=0;j<keys.length;j++){
+      if(s.indexOf(keys[j])!==-1) return KB[i].a;
+    }
+  }
+  return "Great question &mdash; I can help with <b>Korethi</b> (children, PreK&ndash;12), <b>PhoxFin</b> and <b>PhoxFin Next</b> (money &amp; life readiness), and <b>Lumavori</b> (adults). Try asking about subjects, pricing, the seven pillars, or what's launching next.";
+}
+function ppRespond(q){
+  ppTyping();
+  setTimeout(function(){ ppHideTyping(); ppBot(ppFind(q)); }, 480);
+}
+function phoxynAsk(q){
+  if(!ppPanel || !ppPanel.classList.contains("open")) phoxynOpen();
+  ppUser(q); ppRespond(q);
+}
+function phoxynSend(){
+  var t=document.getElementById("pp-text"); if(!t) return;
+  var v=t.value.trim(); if(!v) return;
+  t.value=""; ppUser(v); ppRespond(v);
+}
+</script>
+</body>
+</html>
